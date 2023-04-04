@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype</title>
+</head>
+<body>
+    <script>
+        let user ={
+            name:`jaffa`,
+            age:25
+        }
+        console.log(user)
+        // here i want to access the properties in the Object constructor
+        console.log(user.hasOwnProperty('name')) // this returns true
+    </script>
+    <!-- here is a class  showing prototype chaining -->
+    <script>
+        class person{
+            constructor(name ,age ,locaton){
+                this._name =name;
+                this._age =age;
+                this._location =locaton
+            }
+        }
+        // here i am creating instance of person class object function
+        const Ben = new person('Ben',30,"Gulu")
+        console.log(Ben)
+    </script>
+
+In fact, Object.prototype is an object itself and serves as the prototype for all other objects in JavaScript. Every object in JavaScript inherits properties and methods from Object.prototype.
+
+Here is an example of how you can check the value of Object.prototype in JavaScript:
+
+console.log(Object.prototype); // outputs: {}
+console.log(Object.prototype === null); // outputs: false
+As you can see, the value of Object.prototype is an empty object literal {}, not null.
+<script>
+    console.log(Object.prototype)
+    console.log(Object.prototype === null)
+</script>
+</body>
+</html>
